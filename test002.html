@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //簡單計算臨時工讀生的日薪
+    //基本工讀生日薪100
+    //組長工讀生日薪*1.5
+
+    let pay = 100;
+    let TS = 'TSuiling工作室';
+    document.write('<br>TS ===>' + TS );
+
+    function calcfn(name, pay, hour) {
+      document.write('<br>Fn內 TS ===>' + TS );
+      TS = 'TS1020工作室';
+      document.write('<br>Fn內 TS ===>' + TS );
+      let result = pay * hour;
+      result = name + '日薪=' + result;
+      document.write('<br>Fn內pay===>' + pay);
+      return result;
+    }
+
+    
+
+    {
+      let m1 = calcfn('Amy', pay, 8);
+      document.write('<br>' + m1);
+
+      let m2 = calcfn('Andy', pay * 1.5, 9);
+      document.write('<br>' + m2);
+    }
+    
+    //document.write('<br>區塊區域外再次顯示' + m2);
+    /*
+    document.write('<br>區塊區域外再次顯示');
+    document.write(m2);
+    */
+
+    document.write('<br>pay===>' + pay);
+    document.write('<br>name===>' + name);
+
+    document.write('<br>TS ===>' + TS );
+
+
+
+    document.write('<hr>');
+
+    //箭頭函數
+    // let calcfn2 = (引入)=>{封裝要執行的程式代碼;}
+    let calcfn2 = (name, pay, hour)=>{
+      let result = pay * hour;
+      result = name + '日薪=' + result;
+      return result;
+    }
+
+    document.write('<br>' + calcfn2('Amy', pay, 8));
+    document.write('<br>' + calcfn2('Andy', pay*1.5, 9));
+
+
+  </script>
+
+</body>
+
+</html>

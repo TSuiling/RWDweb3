@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    var v1 = 100;
+    let v2 = 200;
+    const TS = 'TSuiling';
+    //TS = 'TSuiling1020';
+    v2 = 2000;
+    console.log(v2);
+
+    var v1 = 1000;
+    v1 = 10000;
+    console.log(v1);
+
+
+    //let v2 = 20000;
+
+    console.log('======');
+
+    x1 = 100;
+    console.log(x1);
+    var x1;
+    console.log(x1);
+
+    //let x1;
+    console.log('======');
+
+    //定義陣列/數組
+    let array_week = ['日', '一', '二', '三', '四', '五', '六'];
+    console.log(Date());
+    let now = new Date();
+    let nowW = now.getDay();
+    console.log(nowW);
+    nowW = array_week[nowW];
+    console.log('今天是星期' + nowW);
+
+
+
+
+    //執行10次的迴圈,顯示Hello~~並出現打招呼的次數
+    //for計數型迴圈( 設定變數i初始值=1; 當i<=10則進入執行; 每圈後變數i的變化值 ) 
+
+    for (let i = 1; i <= 10; i++) {
+      document.write('Hello~~' + i + '<br>');  //文件中輸出指定字串及變數i的結果
+    }
+    document.write('迴圈後計數器的i變數=' + i);  //所有迴圈後輸出變數 i 最後的結果
+  </script>
+
+</body>
+
+</html>

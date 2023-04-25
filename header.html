@@ -1,0 +1,140 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="moffcanvas" aria-labelledby="moffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="moffcanvasLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <ul class="navbar-nav ms-auto text-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#sec1" aria-current="page">最新消息</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#sec2">新品介紹</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#sec3">商品推薦</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#sec4">保養有道</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#sec5">聯絡我們</a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+<!-- navbar一組導覽列，lg 991px md 767px 以下會轉為手機版 -->
+<!-- navbar-light 是配合亮底版面字為黑色，navbar-dark 是配合暗底版面字為白色 -->
+<!-- bg-light 才是背景顏色,不需要刪除, fixed-top 固定畫面上方 -->
+<header class="navbar navbar-expand-lg navbar-dark">
+
+  <div class="container-xl">
+    <!-- 以下是手機版才出現的按鈕，負責控制顯示原導覽下拉選單 -->
+    <!-- 注意：data-bs-target的名字必須與可收合部份的ID相同 -->
+    <button class="navbar-toggler show-nav-menu" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 表現LOGO連結的區域，可以加上LOGO圖片 -->
+    <a class="navbar-brand" href="#">
+      <h1 class="d-flex align-items-center">
+        <img src="./img/logo.png" width="150" height="148" alt="">
+        蒂莫絲保養品
+      </h1>
+    </a>
+
+    <!-- 以下是手機版才出現的按鈕，負責控制顯示導覽選單 -->
+    <!-- 注意：data-bs-target的名字必須與可收合部份的ID相同 -->
+    <button class="navbar-toggler show-offcanvas-menu" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#moffcanvas" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html" aria-current="page">最新消息</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./sec2.html">新品介紹</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./sec3.html">商品推薦</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./sec4.html">保養有道</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./sec5.html">聯絡我們</a>
+        </li>
+
+        <!-- 含有下拉式選單的按鈕項目START (不要就刪除) 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+
+          先收合的第2層選單
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+
+        </li>
+        -->
+
+        <!-- 這是一個不能按的按鈕項目 (不要就刪除) 
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+        -->
+      </ul>
+
+      <!--  這是一個表單，可以是搜尋用的表單 (不要就刪除)
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+
+      <p class="d-lg-none text-white mx-3 my-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam soluta deleniti iusto. Dolorem est eaque
+        fugit eos quo animi nesciunt cum adipisci totam quod doloremque reiciendis, earum expedita voluptates vel?
+      </p>
+
+    </nav>
+  </div>
+
+</header>
+
+
+<script>
+  //讓header中按鈕對應到各頁呈現.active的狀態
+  //如何對應？
+  var pageno = $('body').attr('data-pageno');
+  $('.navbar-collapse .nav-link').eq(pageno).addClass('active');
+</script>

@@ -1,0 +1,95 @@
+
+/* #sec2 區域 ===================================================== */
+/*
+#sec2 {
+    padding-bottom: 150px;
+    background-image: url(./img/sec2_f1.png), url(./img/sec2_f1.png), url(./img/sec2_f2.png);
+    background-repeat: no-repeat;
+    background-size: calc(30px + 2vw) auto, calc(45px + 4vw) auto, calc(90px + 2vw) auto;
+    background-position: left 50px, left bottom, right bottom;
+}
+*/
+#sec2 {
+  padding-bottom: 150px;
+  background-image: url(./img/sec2_f1.png), url(./img/sec2_f1.png);
+  background-repeat: no-repeat;
+  background-size: calc(30px + 2vw) auto, calc(45px + 4vw) auto;
+  background-position: left 50px, left bottom;
+  position: relative;
+}
+
+#sec2::after {
+  content: '';
+  display: block;
+  width: calc(90px + 10vw);
+  height: calc(180px + 20vw);
+  background-image: url(./img/sec2_f2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  opacity: .5;
+}
+
+#sec2 .col-img::after {
+  content: '';
+  display: block;
+  background-image: url(./img/shadow2.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 30px;
+}
+
+#sec2 .col-txt {
+  position: relative;
+}
+
+#sec2 .col-txt h3 {
+  font-family: var(--f-family-1);
+  margin-bottom: 1.5rem;
+}
+
+#sec2 .col-txt p {
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+#sec2 .col-txt::after {
+  content: '';
+  display: block;
+  background-color: var(--c-assist2-01);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, 1.3rem);
+  border-radius: 10px;
+}
+
+#sec2 .col-img,
+#sec2 .col-txt h3,
+#sec2 .col-txt p {
+  z-index: 1;
+  position: relative;
+}
+
+@media (min-width:768px) {
+  #sec2 .row {
+      width: 90%;
+      margin: 0 auto;
+      align-items: flex-start;
+  }
+
+  #sec2 .col-img {
+      transform: translateY(3rem);
+  }
+
+  #sec2 .col-txt::after {
+      padding-left: 200px;
+      box-sizing: content-box;
+      transform: translate(-200px, 1.3rem);
+  }
+}
